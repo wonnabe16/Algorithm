@@ -59,10 +59,19 @@ public class BOJ_2146 {
 			}
 		}
 		
+		for(int i=0;i<N;i++) {
+			for(int j=0;j<N;j++) {
+				System.out.print(arr[i][j]+" ");
+			}
+			System.out.println();
+		}
+		
+		
 		// 최단 거리 다리 설치하기
 		isvisited = new boolean[N][N];
 		ans = Integer.MAX_VALUE;
 		for(int i=0;i<N;i++) {
+			
 			for(int j=0;j<N;j++) {
 				if(arr[i][j]>0 && !isvisited[i][j]) {
 					isvisited[i][j] = true;
@@ -111,7 +120,7 @@ public class BOJ_2146 {
 				int count = n.cnt;
 				
 				// 백트랙킹 :다른 섬에 닿기 전데 다리 길이가 이전에 구한 다리 길이보다 길면 중단
-				if(count>ans) {
+				if(count>=ans) {
 					return ans;
 				}
 				

@@ -84,7 +84,7 @@ public class BOJ_1194 {
 				// 열쇠를 만난 경우
 				if (map[nr][nc] - 97 >= 0 && map[nr][nc] - 97 < 6) {
 					int tempKey = (1 << (map[nr][nc] - 97)) | key;
-
+					
 					if (!visited[nr][nc][tempKey]) {
 						visited[nr][nc][tempKey] = true;
 						visited[nr][nc][key] = true;
